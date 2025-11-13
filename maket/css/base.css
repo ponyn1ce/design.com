@@ -1,0 +1,154 @@
+/* base.css — общие правила для всего сайта (вынесены из style.css и main.css) */
+
+/* Reset and base styles */
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  
+}
+
+html {
+  font-size: 115%;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.6;
+  --header-bg: #eee;
+  --text-color: #222;
+  --var-body-bg: #fff;
+  background: var(--var-body-bg);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header / Nav */
+.header {
+  background: var(--var-body-bg);
+  box-shadow: 0 2px 5px rgba(0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  padding: .5rem;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.87rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f297a0;
+}
+
+/* Hero section (базовый стиль) */
+.hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  background: var(--var-body-second-bg);
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25em;
+  color: var(--text-color-sec);
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--var-body-second-bg);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #f297a0;
+}
+
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Footer common */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive baseline */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .nav-links { display: none; }
+}
+
+
+
+
+/* Темная тема через атрибут data-theme */
+body[data-theme="dark"] {
+  --header-bg: #222;
+  --text-color: #fff;
+  --text-color-sec: #ECECF1;
+  --var-body-bg: #202123;
+  --var-body-second-bg: #343541;
+}
+
+/* Светлая тема */
+body[data-theme="light"] {
+  --header-bg: #fff;
+  --text-color: #222;
+  --text-color-sec: #999;
+  --var-body-bg: #fff;
+  --var-body-second-bg: #eee;
+}

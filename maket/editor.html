@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание макетов для каталогов</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/editor.css">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <a href="main.html" class="logo"><img src="images/logo.png" alt="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="editor.html#home">Главная</a></li>
+                    <li><a href="editor.html#create">Создать макет</a></li>
+                    <li><a href="editor.html#about">О нас</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Создавайте великолепные макеты</h1>
+                <p>Простой и удобный инструмент для создания макетов каталогов</p>
+                <a href="editor.html#create" class="btn">Начать создание</a>
+            </div>
+        </section>
+
+        <section class="creator" id="create">
+            <div class="container">
+                <h2>Создать макет</h2>
+                <div class="upload-container">
+                    <div class="upload-column">
+                        <h3>Загрузите первое изображение</h3>
+                        <div class="upload-area" id="upload1">
+                            <input type="file" id="file1" accept="image/*" class="file-input">
+                            <div class="upload-placeholder">
+                                <span>Перетащите изображение сюда или кликните для выбора</span>
+                            </div>
+                            <img id="preview1" class="preview-image" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="upload-column">
+                        <h3>Загрузите второе изображение</h3>
+                        <div class="upload-area" id="upload2">
+                            <input type="file" id="file2" accept="image/*" class="file-input">
+                            <div class="upload-placeholder">
+                                <span>Перетащите изображение сюда или кликните для выбора</span>
+                            </div>
+                            <img id="preview2" class="preview-image" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-next" id="nextButton" disabled>Далее</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Создание макетов. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/darklightbutton.js"></script>
+</body>
+</html>
